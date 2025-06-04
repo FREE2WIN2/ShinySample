@@ -6,16 +6,17 @@ public partial class MainPage : ContentPage
     
     public MainPage(GeoLocationTrackingService geoLocationTrackingService)
     {
+        this.geoLocationTrackingService = geoLocationTrackingService;
         InitializeComponent();
     }
 
-    private Task OnGpsStopClicked(object? sender, EventArgs e)
+    private void OnGpsStopClicked(object? sender, EventArgs e)
     {
-        return this.geoLocationTrackingService.StopListeningForLocationUpdatesAsync();
+        this.geoLocationTrackingService.StopListeningForLocationUpdatesAsync();
     }
 
-    private Task OnGpsStartClicked(object? sender, EventArgs e)
+    private void OnGpsStartClicked(object? sender, EventArgs e)
     {
-        return this.geoLocationTrackingService.StartListeningForLocationUpdatesAsync();
+        this.geoLocationTrackingService.StartListeningForLocationUpdatesAsync();
     }
 }

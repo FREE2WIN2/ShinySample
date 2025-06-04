@@ -18,7 +18,7 @@ namespace ShinySample.Delegate
     public MyGpsDelegate(ILogger<MyGpsDelegate> logger)
       : base(logger)
     {
-      this.MinimumTime = TimeSpan.FromMinutes(1);
+      this.MinimumTime = TimeSpan.FromSeconds(5);
     }
 
     /// <inheritdoc />

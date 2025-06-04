@@ -22,6 +22,7 @@ public static class MauiProgram
         builder.Services.AddSingleton<MainPage>();
         builder.Services.AddSingleton<GeoLocationTrackingService>();
 
+        builder.Logging.AddConsole();
 #if DEBUG
         builder.Logging.AddDebug();
 #endif
